@@ -27,7 +27,7 @@ public class UserService {
     }
 
     public User create(User user) {
-        User newUser= new User();
+        User newUser = new User();
         newUser.setUserName(user.getUserName());
         newUser.setPassword(user.getPassword());
         return repository.save(newUser);
@@ -43,8 +43,9 @@ public class UserService {
 
     public User login(User user) {
         User foundUser = repository.findByUserName(user.getUserName()).orElse(null);
-        if (foundUser.getPassword().equals(user.getPassword()))
-            return foundUser;
+        if (foundUser != null)
+            if (foundUser.getPassword().equals(user.getPassword()))
+                return foundUser;
         return null;
     }
 

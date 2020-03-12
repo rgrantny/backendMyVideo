@@ -39,9 +39,10 @@ public class UserController {
                        @Valid @RequestBody User user) {
         return service.update(userId, user);
     }
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<User> login(@Valid @RequestBody User user){
         System.out.println("userController.login");
+        System.out.println(user);
         User foundUser = service.login(user);
         if (foundUser != null)
             return new ResponseEntity<>(foundUser, HttpStatus.OK);

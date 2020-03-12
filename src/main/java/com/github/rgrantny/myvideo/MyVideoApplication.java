@@ -36,11 +36,11 @@ public class MyVideoApplication implements CommandLineRunner {
 
         Video video001 = new Video();
         video001.setVideoDescription("Hammer - 2Legit2Quit");
-        video001.setVideoLink("https://www.youtube.com/watch?v=HFCv86Olk8E");
+        video001.setVideoLink("https://www.youtube.com/embed/HFCv86Olk8E");
 
         Video video002 = new Video();
         video002.setVideoDescription("Metallica - Nothing Else Matters");
-        video002.setVideoLink("https://www.youtube.com/watch?v=tAGnKpE4NCI");
+        video002.setVideoLink("https://www.youtube.com/embed/   tAGnKpE4NCI");
 
         videoRepository.save(video001);
         videoRepository.save(video002);
